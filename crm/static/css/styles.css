@@ -1,0 +1,31 @@
+
+
+.form-layout{
+
+    border-radius: 15px;
+    width: 500px;
+}
+
+.message-text{
+
+    color: white;
+
+}
+
+.fade-out{
+
+    animation:fadeOut 1s forwards;
+    animation-delay: 3s;
+    
+}
+@keyframes fadeOut{
+
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+
+    }
+
+}

@@ -1,0 +1,10 @@
+
+**/__pycache__/
+**/*.pyc
+
+/crm/db.sqlite3
+/crm/*.log
+/virt/
+
+.DS_Store
+Thumbs.db

@@ -1,0 +1,60 @@
+{% extends 'webapp/base.html' %}
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+
+    <body>
+
+        <div class="container bg-light shadow-md p-5 form-layout" >
+
+            <h3> Update Client </h3>
+            <p>Enter the required client details</p>
+
+            <hr>
+
+            <form method="POST" autocomplete="off">
+
+                {% csrf_token %}
+
+                {{update_client_form.first_name|as_crispy_field}}
+                <br>
+                
+                {{update_client_form.last_name|as_crispy_field}}
+                <br>
+
+                {{update_client_form.email|as_crispy_field}}
+                <br>
+                
+                {{update_client_form.phone_number|as_crispy_field}}
+                <br>
+                
+                {{update_client_form.address|as_crispy_field}}
+                <br>
+                
+                {{update_client_form.city|as_crispy_field}}
+                <br>
+                
+                {{update_client_form.province|as_crispy_field}}
+                <br>
+                
+                {{update_client_form.country|as_crispy_field}}
+                <br>
+
+
+                <hr>
+
+                <button type="submit" class="btn btn-primary w-100 btn-block p-2"> Update </button>
+
+                
+            </form>
+
+        </div>
+    </body>
+
+
+
+
+
+
+{% endblock %}
