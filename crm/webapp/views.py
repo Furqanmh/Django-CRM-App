@@ -26,7 +26,7 @@ def register(request):
             messages.success(request, "Account created successfully!")
             return redirect('mylogin')
         elif not form.is_valid():
-            messages.error(request, "Registration Failed!")
+            messages.error(request, "Invalid Username/Password!")
             return redirect("register")
 
     context = {'register_form': form}
@@ -55,7 +55,7 @@ def my_login(request):
             return redirect("dashboard")
         
         elif not form.is_valid():
-            messages.error(request, "Login Failed!")
+            messages.error(request, "Username/Password Incorrect!")
             return redirect("mylogin")
 
     context = {'login_form': form}
